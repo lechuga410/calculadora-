@@ -14,7 +14,6 @@ body {
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f40101;
-    background-image: url('imagenes/mia.jpg'); /* Fondo oscuro con textura */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -208,3 +207,4 @@ input:hover {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.6; }
 }
+
