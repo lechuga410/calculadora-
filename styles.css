@@ -1,0 +1,210 @@
+/* ========================
+   RESET Y BODY
+======================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f40101;
+    background-image: url('imagenes/mia.jpg'); /* Fondo oscuro con textura */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #eee;
+}
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* ajusta sin deformar */
+    z-index: -2;       /* detrás de todo */
+}
+
+body {
+    background-image: url('imagenes/mia.jpg');
+    background-size: contain;   /* toda la imagen visible */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 0, 0);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Fondo completo */
+    background-image: url('imagenes/mia.jpg'); /* tu imagen */
+    background-size: cover;       /* ocupa todo el contenedor */
+    background-position: center;  /* centrada */
+    background-repeat: no-repeat; /* no se repite */
+    color: #eee;
+}
+body { 
+    background-image: url('imagenes/mia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply; /* oscurece y combina */
+}
+
+
+/* ========================
+   CALCULADORA DARK SATANIC
+======================== */
+.calculadora {
+    position: relative;
+    padding: 40px 50px;
+    border-radius: 25px;
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+
+    /* Sombras internas para efecto fuego */
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.7) inset,
+        0 0 15px rgba(128, 0, 128, 0.5) inset,
+        0 0 30px rgba(255, 0, 0, 0.5);
+    border: 2px solid #ff0000;
+}
+
+/* ========================
+   BORDE ANIMADO ARDIENTE
+======================== */
+.calculadora::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: inherit;
+    padding: 5px;
+    background: conic-gradient(
+        red, orange, yellow, purple, red, orange, yellow
+    );
+    z-index: -1;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    
+    background-origin: border-box;
+    animation: girar 3s linear infinite, fuego 2s ease-in-out infinite alternate;
+}
+
+/* ========================
+   BOTONES DEMONIACOS
+======================== */
+button {
+    background: #2b2b2b;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 12px;
+    padding: 12px 25px;
+    margin: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    border-color: #ff4500;
+    box-shadow: 
+        0 0 15px red, 
+        0 0 30px orange inset, 
+        0 0 10px purple;
+    background: #111;
+    cursor: pointer;
+}
+
+/* ========================
+   INPUTS DEMONIACOS
+======================== */
+input {
+    border: 2px solid #ff0000;
+    border-radius: 12px;
+    padding: 12px;
+    width: 160px;
+    background: #111;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:hover {
+    border-color: orange;
+    box-shadow: 0 0 10px red, 0 0 15px purple inset;
+}
+
+/* ========================
+   ANIMACIONES
+======================== */
+@keyframes girar {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fuego {
+    0% { filter: hue-rotate(0deg) brightness(1); }
+    50% { filter: hue-rotate(30deg) brightness(1.3); }
+    100% { filter: hue-rotate(60deg) brightness(1); }
+}
+/* Texto tipo aviso en la esquina */
+.aviso {
+    position: fixed;      /* siempre visible */
+    bottom: 20px;         /* ajusta la distancia desde abajo */
+    right: 20px;          /* ajusta la distancia desde la derecha */
+    background: rgba(255,0,0,0.8); /* fondo rojo semitransparente */
+    color: #fff;          /* texto blanco */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px red, 0 0 20px orange inset;
+    z-index: 9999;        /* siempre arriba de todo */
+    animation: parpadeo 2s infinite; /* opcional, efecto parpadeo */
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+.aviso {
+    position: fixed;       /* siempre visible */
+    top: 20px;             /* distancia desde arriba */
+    right: 20px;           /* distancia desde la derecha */
+    background: rgba(255,0,0,0.8); /* fondo rojo semitransparente */
+    color: #fff;           /* texto blanco */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px red, 0 0 20px orange inset;
+    z-index: 9999;         /* siempre arriba de todo */
+    animation: parpadeo 2s infinite; /* opcional, parpadeo */
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
